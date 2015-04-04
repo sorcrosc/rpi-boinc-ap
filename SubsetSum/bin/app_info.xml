@@ -1,0 +1,19 @@
+<app_info>
+<app>
+    <name>subset_sum</name>
+    <user_friendly_name>SubsetSum@Home Sum Calculator</user_friendly_name>
+</app>
+<file_info>
+    <name>SubsetSum_0.16_arm-unknown-linux-gnueabihf</name>
+    <executable/>
+</file_info>
+<app_version>
+    <app_name>subset_sum</app_name>
+    <version_num>16</version_num>
+    <api_version>7.5.0</api_version>
+    <file_ref>
+       <file_name>SubsetSum_0.16_arm-unknown-linux-gnueabihf</file_name>
+       <main_program/>
+    </file_ref>
+</app_version>
+</app_info>

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Current wu
+# 50 25 4383679284270 2203961430
+
+# Test case
+# 60 30 59132289574822860 1207607852
+
+for i in SubsetSum*; do
+	rm boinc_finish_called failed_sets.txt sss_checkpoint.txt stderr.txt
+	sleep 1
+	echo $i
+	time ./$i 60 30 59132289574822860 1207607852
+	echo
+	echo
+done
