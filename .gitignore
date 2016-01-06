@@ -3,3 +3,6 @@ boinc/
 
 # SubsetSum github repo https://github.com/travisdesell/subset_sum_at_home
 subset_sum_at_home/
+
+# gene repo https://bitbucket.org/francesco-asnicar/pc-boinc.git
+pc-boinc/
