@@ -15,15 +15,18 @@ export CXX=armv7-unknown-linux-gnueabihf-g++
 export CC=armv7-unknown-linux-gnueabihf-gcc
 
 # crosstool-ng -march=armv7-a -mtune=cortex-a7 -mfpu=vfpv3
-# rename armv7-unknown-linux-gnueabihf.config as .config for crosstool-ng
-export EXECUTABLE=pc_armv7_vfpv3 ARCH='-fsigned-char -march=armv7-a -mtune=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard'
+# armv7-unknown-linux-gnueabihf.config for this configuration. Rename as .config
+#export EXECUTABLE=pc_armv7_vfpv3 ARCH='-march=armv7-a -mtune=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard'
 
 # crosstool-ng -march=armv7-a -mtune=cortex-a7 -mfpu=vfpv4-d16
-#export EXECUTABLE=pc_armv7_vfpv4-d16 ARCH='-fsigned-char -march=armv7-a -mtune=cortex-a7 -mfpu=vfpv4-d16 -mfloat-abi=hard'
+#export EXECUTABLE=pc_armv7_vfpv4-d16 ARCH='-march=armv7-a -mtune=cortex-a7 -mfpu=vfpv4-d16 -mfloat-abi=hard'
+
+# crosstool-ng -march=armv7-a -mtune=cortex-a7 -mfpu=neon-vfpv4
+export EXECUTABLE=pc_armv7_neon-vfpv4 ARCH='-march=armv7-a -mtune=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard'
 
 ln -sf $($CXX -print-file-name=libstdc++.a)
-make -f ../../gene_pc-boinc/Makefile_arm clean
-make -f ../../gene_pc-boinc/Makefile_arm
+make -f ../../gene_pc/Makefile_arm clean
+make -f ../../gene_pc/Makefile_arm
 
-mv ../bin/pc* ../../gene_pc-boinc/bin/
+mv ../bin/pc* ../../gene_pc/bin/
 cd -

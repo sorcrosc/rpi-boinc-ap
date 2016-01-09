@@ -3,7 +3,7 @@ BOINC_API_DIR = $(BOINC_DIR)/api
 BOINC_LIB_DIR = $(BOINC_DIR)/lib
 BOINC_ZIP_DIR = $(BOINC_DIR)/zip
 FREETYPE_DIR = /usr/include/freetype2
-CFLAGS = -c -Ofast $(ARCH) -Wall -Wextra -pedantic $(VARIANTFLAGS) -I$(BOINC_DIR) -I$(BOINC_LIB_DIR) -I$(BOINC_API_DIR) -I$(BOINC_ZIP_DIR) -I$(FREETYPE_DIR)
+CFLAGS = -c -Ofast -fsigned-char $(ARCH) -Wall -Wextra -pedantic $(VARIANTFLAGS) -I$(BOINC_DIR) -I$(BOINC_LIB_DIR) -I$(BOINC_API_DIR) -I$(BOINC_ZIP_DIR) -I$(FREETYPE_DIR)
 CXXFLAGS = $(CFLAGS) -std=c++11
 LDFLAGS = $(ARCH) -L/usr/X11R6/lib -L.
 CXXSOURCES = Graph.cpp boinc_functions.cpp utility.cpp pc.cpp
