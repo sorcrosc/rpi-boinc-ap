@@ -15,14 +15,16 @@ export CXX=armv7-unknown-linux-gnueabihf-g++
 export CC=armv7-unknown-linux-gnueabihf-gcc
 
 # crosstool-ng -march=armv7-a -mtune=cortex-a7 -mfpu=vfpv3
-# armv7-unknown-linux-gnueabihf.config for this configuration. Rename as .config
 #export EXECUTABLE=pc_armv7_vfpv3 ARCH='-march=armv7-a -mtune=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard'
 
+# cortex-a7 without neon
 # crosstool-ng -march=armv7-a -mtune=cortex-a7 -mfpu=vfpv4-d16
 #export EXECUTABLE=pc_armv7_vfpv4-d16 ARCH='-march=armv7-a -mtune=cortex-a7 -mfpu=vfpv4-d16 -mfloat-abi=hard'
 
-# crosstool-ng -march=armv7-a -mtune=cortex-a7 -mfpu=neon-vfpv4
-export EXECUTABLE=pc_armv7_neon-vfpv4 ARCH='-march=armv7-a -mtune=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard'
+# cortex-a7 with neon
+# crosstool-ng -march=armv7-a -mtune=cortex-a7 -mfpu=vfpv4
+# armv7-unknown-linux-gnueabihf.config for this configuration. Rename as .config
+export EXECUTABLE=pc_armv7_vfpv4 ARCH='-march=armv7-a -mtune=cortex-a7 -mfpu=vfpv4 -mfloat-abi=hard'
 
 ln -sf $($CXX -print-file-name=libstdc++.a)
 make -f ../../gene_pc/Makefile_arm clean

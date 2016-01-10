@@ -7,6 +7,5 @@ subset_sum_at_home/
 # gene repo https://bitbucket.org/francesco-asnicar/pc-boinc.git
 pc-boinc/
 
-gene_pc/bin/pc_armv6zk_vfp_03
-gene_pc/bin/pc_armv7_vfpv3_03
-gene_pc/bin/pc_armv7_neon-vfpv4_03
+gene_pc/bin/0fast/
+gene_pc/bin/pc_armv7_neon-vfpv4
