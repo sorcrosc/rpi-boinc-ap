@@ -1,20 +1,22 @@
 #!/bin/bash
 
-for app in bin/pc*;do
-
 # input data
-#   * input/experiments.csv
-#   * input/tile.txt
+#   * input/experiments2.csv
+#   * input/tile2.txt
 
 # results stored in
 #   * output/
 
+[ ! -a input/experiments2.csv ] && echo "unpacking experiments set" && gunzip -k input/experiments2.csv.gz
+
+for app in bin/pc!(*gz); do
+
 echo
 echo -\> ${app##*/}
-time $app input/tile.txt output/output.txt 0.05 1 2470
+time $app input/tile2.txt output/output2.txt 0.05 1 2470
 echo
 
-# clean files of run
+# clean files of current run
 rm -f boinc_lockfile boinc_finish_called stderr.txt
 
 done
