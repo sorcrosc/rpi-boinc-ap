@@ -11,7 +11,7 @@ for app in bin/pc*;do
 
 echo
 echo -\> ${app##*/}
-time $app input/tile.txt output/output.txt 0.05 1 393
+time $app input/tile.txt output/output.txt 0.05 1 2470
 echo
 
 # clean files of run

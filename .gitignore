@@ -5,7 +5,13 @@ boinc/
 subset_sum_at_home/
 
 # gene repo https://bitbucket.org/francesco-asnicar/pc-boinc.git
+# gene repo optimized by Daniel Frużyński https://bitbucket.org/sirzooro/pc-boinc
 pc-boinc/
 
-gene_pc/bin/0fast/
-gene_pc/bin/pc_armv7_neon-vfpv4
+# milkyway repo https://github.com/Milkyway-at-home/milkywayathome_client
+milkywayathome_client/
+milkywayathome/
+
+lalsuite/
+
+

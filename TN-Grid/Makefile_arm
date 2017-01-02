@@ -1,0 +1,31 @@
+BOINC_DIR = ../../boinc
+BOINC_API_DIR = $(BOINC_DIR)/api
+BOINC_LIB_DIR = $(BOINC_DIR)/lib
+BOINC_ZIP_DIR = $(BOINC_DIR)/zip
+BOINC_LIBS = $(BOINC_API_DIR)/libboinc_api.a $(BOINC_LIB_DIR)/libboinc.a
+
+FREETYPE_DIR = /usr/include/freetype2
+CFLAGS = -c -O3 $(ARCH) -Wall -Wextra -pedantic -Werror -I$(BOINC_DIR) -I$(BOINC_LIB_DIR) -I$(BOINC_API_DIR) -I$(BOINC_ZIP_DIR) -I$(FREETYPE_DIR) -Isimd -MMD -MP
+CXXFLAGS = $(CFLAGS) -std=c++11
+LDFLAGS = $(ARCH) -L/usr/X11R6/lib -L.
+CXXSOURCES = BoincFile.cpp Graph.cpp boinc_functions.cpp utility.cpp pc.cpp
+CSOURCES = erf.c
+OBJECTS = $(CXXSOURCES:.cpp=.o) $(CSOURCES:.c=.o)
+
+all: $(EXECUTABLE)
+        
+$(EXECUTABLE): $(OBJECTS)
+	$(CXX) $(LDFLAGS) $(OBJECTS) -o ../bin/$@ -static-libgcc -static-libstdc++ -pthread $(BOINC_LIBS)
+
+.cpp.o:
+	$(CXX) $(CXXFLAGS) $< -o $@
+
+.c.o:
+	$(CC) $(CFLAGS) $< -o $@
+
+clean:
+	rm -rf ../bin/$(EXECUTABLE) *.o *~ *.d
+
+.PHONY: all clean
+
+-include $(CXXSOURCES:.cpp=.d) $(CSOURCES:.c=.d)
