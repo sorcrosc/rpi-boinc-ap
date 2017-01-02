@@ -7,9 +7,9 @@
 # results stored in
 #   * output/
 
-[ ! -a input/experiments2.csv ] && echo "unpacking experiments set" && gunzip -k input/experiments2.csv.gz
+[ ! -e input/experiments2.csv ] && echo "Unpacking experiments set" && gunzip -k input/experiments2.csv.gz
 
-for app in bin/pc!(*gz); do
+for app in bin/pc*[!g][!z]; do
 
 echo
 echo -\> ${app##*/}
