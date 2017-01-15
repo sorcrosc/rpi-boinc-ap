@@ -15,7 +15,7 @@ cd ../pc-boinc/src
 export CXX=arm-linux-gnueabihf-g++
 export CC=arm-linux-gnueabihf-gcc
 
-export EXECUTABLE=pc_armv7_vfpv3 ARCH='-fsigned-char -ftree-vectorize -march=armv7-a -mtune=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard'
+export EXECUTABLE=pc_armv7_vfpv3 ARCH='-fsigned-char -ftree-vectorize -march=armv7-a -mtune=cortex-a9 -mfpu=vfpv3-d16 -mfloat-abi=hard'
 #export EXECUTABLE=pc_armv7_vfpv4 ARCH='-fsigned-char -ftree-vectorize -march=armv7-a -mtune=cortex-a7 -mfpu=vfpv4 -mfloat-abi=hard'
 
 make -f $here/Makefile_arm clean
