@@ -1,8 +1,8 @@
 <app_info>
 
 <app>
-<name>gene</name>
-<user_friendly_name>Gene Network Application</user_friendly_name>
+<name>gene_pcim</name>
+<user_friendly_name>gene@home PC-IM</user_friendly_name>
 </app>
 
 <file_info>
@@ -11,8 +11,8 @@
 </file_info>
 
 <app_version>
-<app_name>gene</app_name>
-<version_num>9</version_num>
+<app_name>gene_pcim</app_name>
+<version_num>103</version_num>
 <file_ref>
 <file_name>pc</file_name>
 <main_program/>

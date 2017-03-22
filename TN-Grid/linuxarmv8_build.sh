@@ -15,7 +15,7 @@ cd ../pc-boinc/src
 export CXX=aarch64-linux-gnu-g++
 export CC=aarch64-linux-gnu-gcc
 
-export EXECUTABLE=pc_armv8-a ARCH='-fsigned-char -ftree-vectorize -march=armv8-a -mtune=cortex-a53'
+export EXECUTABLE=pc_armv8-a ARCH='-fsigned-char -ftree-vectorize -march=armv8-a -mtune=cortex-a53' BZ2=libbz2_aarch64
 
 make -f $here/Makefile_arm clean
 make -f $here/Makefile_arm

@@ -13,7 +13,7 @@ for app in bin/pc*[!g][!z]; do
 
 echo
 echo -\> ${app##*/}
-time $app input/tile2.txt output/output2.txt 0.05 1 2470
+time $app input/tile2.txt output/output2.txt 0.05 1 2470 0
 echo
 
 # clean files of current run
