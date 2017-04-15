@@ -16,7 +16,7 @@ export CXX=armv6zk-rpi-linux-gnueabihf-g++
 export CC=armv6zk-rpi-linux-gnueabihf-gcc
 
 # crosstool-ng .config file: armv6zk-rpi-linux-gnueabihf.config.
-export EXECUTABLE=pc_armv6zk_vfp ARCH='-fsigned-char -ftree-vectorize -march=armv6zk -mtune=arm1176jz-s -mfpu=vfp -mfloat-abi=hard' BZ2=libbz2_armhf
+export EXECUTABLE=pcim_armv6zk_vfp ARCH='-fsigned-char -ftree-vectorize -march=armv6zk -mtune=arm1176jz-s -mfpu=vfp -mfloat-abi=hard' BZ2=libbz2_armhf
 
 make -f $here/Makefile_arm clean
 make -f $here/Makefile_arm
