@@ -15,8 +15,8 @@ cd ../pc-boinc/src
 export CXX=arm-unknown-linux-gnueabihf-g++
 export CC=arm-unknown-linux-gnueabihf-gcc
 
-#export EXECUTABLE=pcim_armv7_vfpv3 ARCH='-fsigned-char -ftree-vectorize -march=armv7-a -mtune=cortex-a9 -mfpu=vfpv3-d16 -mfloat-abi=hard' BZ2=libbz2_armhf
-export EXECUTABLE=pcim_armv7_vfpv4 ARCH='-fsigned-char -ftree-vectorize -march=armv7-a -mtune=cortex-a7 -mfpu=vfpv4 -mfloat-abi=hard' BZ2=libbz2_armhf
+export EXECUTABLE=pcim_armv7_vfpv3 ARCH='-fsigned-char -ftree-vectorize -march=armv7-a -mtune=cortex-a9 -mfpu=vfpv3-d16 -mfloat-abi=hard' BZ2=libbz2_armhf
+#export EXECUTABLE=pcim_armv7_vfpv4 ARCH='-fsigned-char -ftree-vectorize -march=armv7-a -mtune=cortex-a7 -mfpu=vfpv4 -mfloat-abi=hard' BZ2=libbz2_armhf
 
 make -f $here/Makefile_arm clean
 make -f $here/Makefile_arm
